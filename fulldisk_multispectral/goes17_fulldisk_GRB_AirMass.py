@@ -551,6 +551,15 @@ for item in thelist:
 thefile.close
 os.rename('/whirlwind/goes17/multi_air_mass_rgb/namer_60_temp.list','/whirlwind/goes17/multi_air_mass_rgb/goes17_namer_loop_60.list')
 
+thefile = open('/whirlwind/goes17/multi_air_mass_rgb/namer_week_temp.list', 'w')
+thelist = file_list[-1009::3]
+for item in thelist:
+    head, tail = os.path.split(item)
+    head, mid = os.path.split(head)
+    thefile.write(mid + '/' + tail + '\n')
+thefile.close
+os.rename('/whirlwind/goes17/multi_air_mass_rgb/namer_week_temp.list','/whirlwind/goes17/multi_air_mass_rgb/goes17_namer_loop_week.list')
+
 
 
 # quit()
@@ -656,7 +665,18 @@ for item in thelist:
     head, mid = os.path.split(head)
     thefile.write(mid + '/' + tail + '\n')
 thefile.close
-os.rename('/whirlwind/goes17/multi_air_mass_rgb/fulldisk_60_temp.list','/whirlwind/goes17/multi_air_mass_rgb/goes17_fulldisk_loop.list')
+os.rename('/whirlwind/goes17/multi_air_mass_rgb/fulldisk_60_temp.list','/whirlwind/goes17/multi_air_mass_rgb/goes17_fulldisk_loop_60.list')
+
+thefile = open('/whirlwind/goes17/multi_air_mass_rgb/fulldisk_week_temp.list', 'w')
+thelist = file_list[-1009::3]
+#print ("thelist is ",thelist)
+
+for item in thelist:
+    head, tail = os.path.split(item)
+    head, mid = os.path.split(head)
+    thefile.write(mid + '/' + tail + '\n')
+thefile.close
+os.rename('/whirlwind/goes17/multi_air_mass_rgb/fulldisk_week_temp.list','/whirlwind/goes17/multi_air_mass_rgb/goes17_fulldisk_loop_week.list')
 
 
 silentremove("/whirlwind/goes17/multi_air_mass_rgb/fulldisk/latest_fulldisk_72.jpg")
@@ -758,6 +778,15 @@ for item in thelist:
 thefile.close
 os.rename('/whirlwind/goes17/multi_air_mass_rgb/npac_60_temp.list','/whirlwind/goes17/multi_air_mass_rgb/goes17_npac_loop_60.list')
 
+thefile = open('/whirlwind/goes17/multi_air_mass_rgb/npac_week_temp.list', 'w')
+thelist = file_list[-1009::3]
+for item in thelist:
+    head, tail = os.path.split(item)
+    head, mid = os.path.split(head)
+    thefile.write(mid + '/' + tail + '\n')
+thefile.close
+os.rename('/whirlwind/goes17/multi_air_mass_rgb/npac_week_temp.list','/whirlwind/goes17/multi_air_mass_rgb/goes17_npac_loop_week.list')
+
 silentremove("/whirlwind/goes17/multi_air_mass_rgb/npac/latest_npac_72.jpg")
 silentrename("/whirlwind/goes17/multi_air_mass_rgb/npac/latest_npac_71.jpg", "/whirlwind/goes17/multi_air_mass_rgb/npac/latest_npac_72.jpg")
 silentrename("/whirlwind/goes17/multi_air_mass_rgb/npac/latest_npac_70.jpg", "/whirlwind/goes17/multi_air_mass_rgb/npac/latest_npac_71.jpg")
@@ -856,6 +885,15 @@ for item in thelist:
     thefile.write(mid + '/' + tail + '\n')
 thefile.close
 os.rename('/whirlwind/goes17/multi_air_mass_rgb/ak_60_temp.list','/whirlwind/goes17/multi_air_mass_rgb/goes17_ak_loop_60.list')
+
+thefile = open('/whirlwind/goes17/multi_air_mass_rgb/ak_week_temp.list', 'w')
+thelist = file_list[-1009::3]
+for item in thelist:
+    head, tail = os.path.split(item)
+    head, mid = os.path.split(head)
+    thefile.write(mid + '/' + tail + '\n')
+thefile.close
+os.rename('/whirlwind/goes17/multi_air_mass_rgb/ak_week_temp.list','/whirlwind/goes17/multi_air_mass_rgb/goes17_ak_loop_week.list')
 
 silentremove("/whirlwind/goes17/multi_air_mass_rgb/ak/latest_ak_72.jpg")
 silentrename("/whirlwind/goes17/multi_air_mass_rgb/ak/latest_ak_71.jpg", "/whirlwind/goes17/multi_air_mass_rgb/ak/latest_ak_72.jpg")
